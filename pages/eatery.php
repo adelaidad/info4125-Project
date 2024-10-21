@@ -1,5 +1,8 @@
-<!-- Home page where user will add their goals -->
+<!-- Page with info on x queried eatery -->
 <?php
+// retrieve query string parameters for eatery
+$eatery_name = $_GET["eatery"] ?? NULL;
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +18,7 @@
 
 
 <body>
-  <h1>TODO</h1>
+  <h1><?php echo $eatery_name ?></h1>
 </body>
 
 </html>
