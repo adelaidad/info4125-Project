@@ -7,19 +7,36 @@ CREATE TABLE meals (
   serving_size INT NOT NULL,
   cal INT NOT NULL,
   cal_from_fat INT NOT NULL,
-  total_fat INT NOT NULL, --g
+  total_fat INT NOT NULL,
+  --g
   cholesterol INT NOT NULL,
-  sodium INT NOT NULL, --mg
-  potassium INT NOT NULL, --mg
-  total_carbs INT NOT NULL, --g
-  protein INT NOT NULL, --g
+  sodium INT NOT NULL,
+  --mg
+  potassium INT NOT NULL,
+  --mg
+  total_carbs INT NOT NULL,
+  --g
+  protein INT NOT NULL,
+  --g
   PRIMARY KEY(id AUTOINCREMENT) FOREIGN KEY(eatery_id) REFERENCES eateries(id)
 );
 
-
 -- cafe jennies
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     1,
@@ -37,7 +54,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     2,
@@ -55,7 +85,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     3,
@@ -73,7 +116,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     4,
@@ -91,7 +147,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     5,
@@ -109,7 +178,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     6,
@@ -127,7 +209,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     7,
@@ -145,7 +240,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     8,
@@ -163,7 +271,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     9,
@@ -181,7 +302,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     10,
@@ -199,7 +333,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     11,
@@ -217,7 +364,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     12,
@@ -235,7 +395,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     13,
@@ -253,7 +426,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     14,
@@ -271,7 +457,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     15,
@@ -289,7 +488,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     16,
@@ -307,7 +519,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     17,
@@ -325,7 +550,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     18,
@@ -343,7 +581,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     19,
@@ -360,9 +611,21 @@ VALUES
     17
   );
 
-
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     20,
@@ -381,7 +644,20 @@ VALUES
 
 -- Crossings Cafe
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     21,
@@ -399,7 +675,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     22,
@@ -417,7 +706,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     23,
@@ -435,7 +737,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     24,
@@ -452,9 +767,21 @@ VALUES
     24
   );
 
-
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     25,
@@ -473,7 +800,20 @@ VALUES
 
 -- Cornell Dairy Bar
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     26,
@@ -491,7 +831,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     27,
@@ -509,7 +862,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     28,
@@ -527,7 +893,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     29,
@@ -545,7 +924,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     30,
@@ -563,7 +955,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     31,
@@ -581,7 +986,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     32,
@@ -599,7 +1017,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     33,
@@ -617,7 +1048,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     34,
@@ -635,7 +1079,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     35,
@@ -654,7 +1111,20 @@ VALUES
 
 -- Big Red Barn
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     36,
@@ -672,7 +1142,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     37,
@@ -690,7 +1173,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     38,
@@ -708,7 +1204,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     39,
@@ -726,7 +1235,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     40,
@@ -744,7 +1266,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     41,
@@ -763,7 +1298,20 @@ VALUES
 
 -- Mattin's
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     42,
@@ -781,7 +1329,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     43,
@@ -799,7 +1360,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     44,
@@ -817,7 +1391,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     45,
@@ -835,7 +1422,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     46,
@@ -853,7 +1453,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     47,
@@ -871,7 +1484,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     48,
@@ -889,7 +1515,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     49,
@@ -907,7 +1546,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     50,
@@ -925,7 +1577,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     51,
@@ -943,7 +1608,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     52,
@@ -961,7 +1639,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     53,
@@ -979,7 +1670,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     54,
@@ -997,7 +1701,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     55,
@@ -1015,7 +1732,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     56,
@@ -1033,7 +1763,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     57,
@@ -1051,7 +1794,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     58,
@@ -1069,7 +1825,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     59,
@@ -1087,7 +1856,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     60,
@@ -1105,7 +1887,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     61,
@@ -1123,7 +1918,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     62,
@@ -1141,7 +1949,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     63,
@@ -1159,7 +1980,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     64,
@@ -1177,7 +2011,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     65,
@@ -1195,7 +2042,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     66,
@@ -1213,7 +2073,20 @@ VALUES
   );
 
 INSERT INTO
-  meals (id, eatery_id, name, serving_size, cal, cal_from_fat, total_fat, cholesterol, sodium, potassium, total_carbs, protein)
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
 VALUES
   (
     67,
@@ -1229,8 +2102,70 @@ VALUES
     39,
     16
   );
--- EATERIES
 
+INSERT INTO
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
+VALUES
+  (
+    67,
+    2,
+    'The Garden - Croissant',
+    186,
+    560,
+    315,
+    35,
+    370,
+    770,
+    210,
+    39,
+    16
+  );
+
+INSERT INTO
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein
+  )
+VALUES
+  (
+    68,
+    8,
+    'Egg & Cheese Breakfast Sandwich',
+    177,
+    380,
+    126,
+    14,
+    325,
+    770,
+    125,
+    41,
+    20
+  );
+
+-- EATERIES
 CREATE TABLE eateries (
   id INTEGER NOT NULL UNIQUE,
   name TEXT NOT NULL,
@@ -1238,24 +2173,56 @@ CREATE TABLE eateries (
 );
 
 INSERT INTO
-  eateries (id, name) VALUES (1, 'Bus Stop Bagels');
+  eateries (id, name)
+VALUES
+  (1, 'Bus Stop Bagels');
+
 INSERT INTO
-  eateries (id, name) VALUES (2, 'Cafe Jennie');
+  eateries (id, name)
+VALUES
+  (2, 'Cafe Jennie');
+
 INSERT INTO
-  eateries (id, name) VALUES (3, 'Crossings Café');
+  eateries (id, name)
+VALUES
+  (3, 'Crossings Café');
+
 INSERT INTO
-  eateries (id, name) VALUES (4, 'Cornell Dairy Bar');
+  eateries (id, name)
+VALUES
+  (4, 'Cornell Dairy Bar');
+
 INSERT INTO
-  eateries (id, name) VALUES (5, 'The Big Red Barn');
+  eateries (id, name)
+VALUES
+  (5, 'The Big Red Barn');
+
 INSERT INTO
-  eateries (id, name) VALUES (6, "Mattin's");
+  eateries (id, name)
+VALUES
+  (6, "Mattin's");
+
 INSERT INTO
-  eateries (id, name) VALUES (7, "Goldie's");
+  eateries (id, name)
+VALUES
+  (7, "Goldie's");
+
 INSERT INTO
-  eateries (id, name) VALUES (8, "Atrium Café");
+  eateries (id, name)
+VALUES
+  (8, "Atrium Café");
+
 INSERT INTO
-  eateries (id, name) VALUES (9, "Mann Café");
+  eateries (id, name)
+VALUES
+  (9, "Mann Café");
+
 INSERT INTO
-  eateries (id, name) VALUES (10, "Martha's");
+  eateries (id, name)
+VALUES
+  (10, "Martha's");
+
 INSERT INTO
-  eateries (id, name) VALUES (11, "Risley Dining");
+  eateries (id, name)
+VALUES
+  (11, "Risley Dining");

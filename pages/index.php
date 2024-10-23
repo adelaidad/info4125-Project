@@ -15,7 +15,14 @@
 
 
 <body>
-  <h1>TODO</h1>
+  <h1>Name of the App</h1>
+  <h2>Hi Name!</h2>
+
+  <!-- Form for Goals -->
+
+
+  <a href="/eateries">Find where to eat!</a>
+
 </body>
 
 </html>

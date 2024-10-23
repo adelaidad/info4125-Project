@@ -2,6 +2,8 @@
 
 const ROUTES = array(
   "/"                             => "pages/index.php",
+  "/eateries"                             => "pages/eatery.php",
+  "/meals"                             => "pages/meal.php",
   "/notfound"                      => "pages/not-found.php"
 );
 
