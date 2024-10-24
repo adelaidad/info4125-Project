@@ -1,4 +1,3 @@
--- database: ../test.sqlite
 -- MEALS
 CREATE TABLE meals (
   id INTEGER NOT NULL UNIQUE,
@@ -18,7 +17,16 @@ CREATE TABLE meals (
   --g
   protein INT NOT NULL,
   --g
-  PRIMARY KEY(id AUTOINCREMENT) FOREIGN KEY(eatery_id) REFERENCES eateries(id)
+  dairy_free INT NOT NULL,
+  alcohol_free INT NOT NULL,
+  soy_free INT NOT NULL,
+  nuts_free INT NOT NULL,
+  gluten_free INT NOT NULL,
+  wheat_free INT NOT NULL,
+  egg_free INT NOT NULL,
+  vegan INT NOT NULL,
+  vegetarian INT NOT NULL,
+  PRIMARY KEY (id AUTOINCREMENT) FOREIGN KEY (eatery_id) REFERENCES eateries (id)
 );
 
 -- cafe jennies
@@ -35,7 +43,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -50,7 +67,16 @@ VALUES
     1060,
     360,
     37,
-    25
+    25,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
   );
 
 INSERT INTO
@@ -66,7 +92,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -81,7 +116,16 @@ VALUES
     1610,
     250,
     53,
-    34
+    34,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0
   );
 
 INSERT INTO
@@ -97,7 +141,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -112,7 +165,16 @@ VALUES
     1910,
     310,
     35,
-    42
+    42,
+    1,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
   );
 
 INSERT INTO
@@ -128,7 +190,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -143,7 +214,16 @@ VALUES
     1440,
     30,
     27,
-    22
+    22,
+    1,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
   );
 
 INSERT INTO
@@ -159,7 +239,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -174,99 +263,15 @@ VALUES
     1360,
     490,
     62,
-    12
-  );
-
-INSERT INTO
-  meals (
-    id,
-    eatery_id,
-    name,
-    serving_size,
-    cal,
-    cal_from_fat,
-    total_fat,
-    cholesterol,
-    sodium,
-    potassium,
-    total_carbs,
-    protein
-  )
-VALUES
-  (
-    6,
-    2,
-    'Citrus Ginger Salmon Wrap',
-    397,
-    770,
-    360,
-    40,
-    75,
-    740,
-    350,
-    75,
-    31
-  );
-
-INSERT INTO
-  meals (
-    id,
-    eatery_id,
-    name,
-    serving_size,
-    cal,
-    cal_from_fat,
-    total_fat,
-    cholesterol,
-    sodium,
-    potassium,
-    total_carbs,
-    protein
-  )
-VALUES
-  (
-    7,
-    2,
-    'Rainbow Tofu Bahn Mi Sandwich',
-    368,
-    340,
-    135,
-    15,
+    12,
+    1,
+    1,
     0,
-    740,
-    280,
-    42,
-    8
-  );
-
-INSERT INTO
-  meals (
-    id,
-    eatery_id,
-    name,
-    serving_size,
-    cal,
-    cal_from_fat,
-    total_fat,
-    cholesterol,
-    sodium,
-    potassium,
-    total_carbs,
-    protein
-  )
-VALUES
-  (
-    8,
-    2,
-    'Side Salad',
-    79,
-    60,
-    27,
-    3,
+    1,
     0,
-    140,
-    210,
-    9,
+    0,
+    1,
+    1,
     1
   );
 
@@ -283,7 +288,163 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
+  )
+VALUES
+  (
+    6,
+    2,
+    'Citrus Ginger Salmon Wrap',
+    397,
+    770,
+    360,
+    40,
+    75,
+    740,
+    350,
+    75,
+    31,
+    1,
+    1,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0
+  );
+
+INSERT INTO
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
+  )
+VALUES
+  (
+    7,
+    2,
+    'Rainbow Tofu Bahn Mi Sandwich',
+    368,
+    340,
+    135,
+    15,
+    0,
+    740,
+    280,
+    42,
+    8,
+    1,
+    1,
+    0,
+    1,
+    0,
+    0,
+    1,
+    1,
+    1
+  );
+
+INSERT INTO
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
+  )
+VALUES
+  (
+    8,
+    2,
+    'Side Salad',
+    79,
+    60,
+    27,
+    3,
+    0,
+    140,
+    210,
+    9,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  );
+
+INSERT INTO
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -298,7 +459,16 @@ VALUES
     65,
     0,
     23,
-    4
+    4,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1
   );
 
 INSERT INTO
@@ -314,7 +484,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -329,7 +508,16 @@ VALUES
     860,
     0,
     28,
-    25
+    25,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
   );
 
 INSERT INTO
@@ -345,7 +533,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -360,7 +557,16 @@ VALUES
     830,
     150,
     28,
-    21
+    21,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
   );
 
 INSERT INTO
@@ -376,7 +582,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -391,7 +606,16 @@ VALUES
     870,
     0,
     36,
-    20
+    20,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
   );
 
 INSERT INTO
@@ -407,7 +631,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -422,7 +655,16 @@ VALUES
     830,
     150,
     36,
-    16
+    16,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
   );
 
 INSERT INTO
@@ -438,7 +680,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -453,7 +704,16 @@ VALUES
     800,
     220,
     34,
-    22
+    22,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
   );
 
 INSERT INTO
@@ -469,7 +729,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -484,7 +753,16 @@ VALUES
     770,
     370,
     33,
-    18
+    18,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
   );
 
 INSERT INTO
@@ -500,7 +778,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -515,7 +802,16 @@ VALUES
     800,
     220,
     42,
-    17
+    17,
+    0,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
   );
 
 INSERT INTO
@@ -531,7 +827,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -546,7 +851,16 @@ VALUES
     770,
     370,
     42,
-    13
+    13,
+    0,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
   );
 
 INSERT INTO
@@ -562,7 +876,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -577,7 +900,16 @@ VALUES
     770,
     210,
     30,
-    21
+    21,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
   );
 
 INSERT INTO
@@ -593,7 +925,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -608,7 +949,16 @@ VALUES
     740,
     360,
     30,
-    17
+    17,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
   );
 
 INSERT INTO
@@ -624,7 +974,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -639,7 +998,16 @@ VALUES
     740,
     360,
     38,
-    12
+    12,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
   );
 
 -- Crossings Cafe
@@ -656,7 +1024,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -671,7 +1048,16 @@ VALUES
     740,
     55,
     36,
-    12
+    12,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1
   );
 
 INSERT INTO
@@ -687,7 +1073,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -702,7 +1097,16 @@ VALUES
     590,
     80,
     27,
-    14
+    14,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
   );
 
 INSERT INTO
@@ -718,7 +1122,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -733,7 +1146,16 @@ VALUES
     930,
     180,
     27,
-    21
+    21,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
   );
 
 INSERT INTO
@@ -749,7 +1171,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -764,7 +1195,16 @@ VALUES
     1130,
     80,
     28,
-    24
+    24,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
   );
 
 INSERT INTO
@@ -780,7 +1220,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -795,7 +1244,16 @@ VALUES
     790,
     250,
     38,
-    16
+    16,
+    1,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
   );
 
 -- Cornell Dairy Bar
@@ -812,7 +1270,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -827,7 +1294,16 @@ VALUES
     1530,
     150,
     69,
-    45
+    45,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
   );
 
 INSERT INTO
@@ -843,7 +1319,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -858,7 +1343,16 @@ VALUES
     1020,
     760,
     80,
-    18
+    18,
+    1,
+    1,
+    0,
+    1,
+    0,
+    0,
+    1,
+    1,
+    1
   );
 
 INSERT INTO
@@ -874,7 +1368,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -889,7 +1392,16 @@ VALUES
     1600,
     330,
     83,
-    21
+    21,
+    1,
+    1,
+    0,
+    1,
+    0,
+    0,
+    1,
+    1,
+    1
   );
 
 INSERT INTO
@@ -905,7 +1417,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -920,7 +1441,16 @@ VALUES
     1910,
     20,
     63,
-    43
+    43,
+    1,
+    1,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    1
   );
 
 INSERT INTO
@@ -936,7 +1466,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -951,7 +1490,16 @@ VALUES
     1360,
     320,
     54,
-    33
+    33,
+    1,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
   );
 
 INSERT INTO
@@ -967,7 +1515,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -982,7 +1539,16 @@ VALUES
     650,
     105,
     28,
-    12
+    12,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
   );
 
 INSERT INTO
@@ -998,7 +1564,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -1013,7 +1588,16 @@ VALUES
     990,
     200,
     29,
-    19
+    19,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
   );
 
 INSERT INTO
@@ -1029,7 +1613,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -1044,7 +1637,16 @@ VALUES
     930,
     190,
     28,
-    19
+    19,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
   );
 
 INSERT INTO
@@ -1060,7 +1662,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -1075,7 +1686,16 @@ VALUES
     1020,
     220,
     28,
-    21
+    21,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
   );
 
 INSERT INTO
@@ -1091,7 +1711,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -1106,7 +1735,16 @@ VALUES
     1190,
     105,
     29,
-    22
+    22,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
   );
 
 -- Big Red Barn
@@ -1123,7 +1761,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -1138,7 +1785,16 @@ VALUES
     1610,
     250,
     53,
-    34
+    34,
+    1,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
   );
 
 INSERT INTO
@@ -1154,7 +1810,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -1169,7 +1834,16 @@ VALUES
     2120,
     580,
     55,
-    42
+    42,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0
   );
 
 INSERT INTO
@@ -1185,7 +1859,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -1200,7 +1883,16 @@ VALUES
     2840,
     310,
     66,
-    45
+    45,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
   );
 
 INSERT INTO
@@ -1216,7 +1908,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -1231,7 +1932,16 @@ VALUES
     1170,
     710,
     103,
-    27
+    27,
+    1,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
   );
 
 INSERT INTO
@@ -1247,7 +1957,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -1262,7 +1981,16 @@ VALUES
     950,
     440,
     75,
-    24
+    24,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
   );
 
 INSERT INTO
@@ -1278,7 +2006,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -1293,6 +2030,15 @@ VALUES
     45,
     125,
     2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
     1
   );
 
@@ -1310,7 +2056,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -1325,7 +2080,16 @@ VALUES
     1360,
     320,
     54,
-    33
+    33,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
   );
 
 INSERT INTO
@@ -1341,7 +2105,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -1356,7 +2129,16 @@ VALUES
     2060,
     340,
     58,
-    26
+    26,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0
   );
 
 INSERT INTO
@@ -1372,7 +2154,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -1387,7 +2178,16 @@ VALUES
     1240,
     740,
     64,
-    15
+    15,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
   );
 
 INSERT INTO
@@ -1403,7 +2203,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -1418,7 +2227,16 @@ VALUES
     1470,
     270,
     44,
-    41
+    41,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
   );
 
 INSERT INTO
@@ -1434,7 +2252,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -1449,7 +2276,16 @@ VALUES
     1660,
     270,
     45,
-    39
+    39,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
   );
 
 INSERT INTO
@@ -1465,7 +2301,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -1480,7 +2325,16 @@ VALUES
     2940,
     360,
     113,
-    48
+    48,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0
   );
 
 INSERT INTO
@@ -1496,7 +2350,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -1511,7 +2374,16 @@ VALUES
     2020,
     240,
     56,
-    48
+    48,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0
   );
 
 INSERT INTO
@@ -1527,7 +2399,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -1542,36 +2423,14 @@ VALUES
     820,
     440,
     62,
-    15
-  );
-
-INSERT INTO
-  meals (
-    id,
-    eatery_id,
-    name,
-    serving_size,
-    cal,
-    cal_from_fat,
-    total_fat,
-    cholesterol,
-    sodium,
-    potassium,
-    total_carbs,
-    protein
-  )
-VALUES
-  (
-    50,
-    6,
-    'Kosher Dill Pickle Spear',
-    28,
+    15,
+    1,
+    1,
+    0,
+    1,
     0,
     0,
-    0,
-    0,
-    210,
-    0,
+    1,
     1,
     1
   );
@@ -1589,7 +2448,65 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
+  )
+VALUES
+  (
+    50,
+    6,
+    'Kosher Dill Pickle Spear',
+    28,
+    0,
+    0,
+    0,
+    0,
+    210,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  );
+
+INSERT INTO
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -1604,7 +2521,16 @@ VALUES
     650,
     105,
     28,
-    12
+    12,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
   );
 
 INSERT INTO
@@ -1620,7 +2546,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -1635,7 +2570,16 @@ VALUES
     990,
     200,
     29,
-    19
+    19,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
   );
 
 INSERT INTO
@@ -1651,7 +2595,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -1666,7 +2619,16 @@ VALUES
     930,
     190,
     28,
-    19
+    19,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
   );
 
 INSERT INTO
@@ -1682,7 +2644,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -1697,7 +2668,16 @@ VALUES
     1190,
     105,
     29,
-    22
+    22,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
   );
 
 INSERT INTO
@@ -1713,7 +2693,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -1728,7 +2717,16 @@ VALUES
     2290,
     0,
     82,
-    35
+    35,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
   );
 
 INSERT INTO
@@ -1744,7 +2742,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -1759,7 +2766,16 @@ VALUES
     3570,
     0,
     42,
-    37
+    37,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
   );
 
 INSERT INTO
@@ -1775,7 +2791,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -1790,7 +2815,16 @@ VALUES
     2820,
     0,
     100,
-    35
+    35,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
   );
 
 INSERT INTO
@@ -1806,7 +2840,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -1821,7 +2864,16 @@ VALUES
     1280,
     140,
     54,
-    28
+    28,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0
   );
 
 INSERT INTO
@@ -1837,7 +2889,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -1852,7 +2913,16 @@ VALUES
     1770,
     140,
     54,
-    50
+    50,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    1
   );
 
 INSERT INTO
@@ -1868,7 +2938,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -1883,7 +2962,16 @@ VALUES
     710,
     410,
     41,
-    26
+    26,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    1
   );
 
 INSERT INTO
@@ -1899,7 +2987,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -1914,7 +3011,16 @@ VALUES
     570,
     450,
     40,
-    16
+    16,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
   );
 
 INSERT INTO
@@ -1930,7 +3036,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -1945,7 +3060,16 @@ VALUES
     1580,
     370,
     65,
-    28
+    28,
+    1,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
   );
 
 INSERT INTO
@@ -1961,7 +3085,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -1976,7 +3109,16 @@ VALUES
     2610,
     1180,
     75,
-    56
+    56,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0
   );
 
 INSERT INTO
@@ -1992,7 +3134,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -2007,7 +3158,16 @@ VALUES
     2830,
     410,
     55,
-    34
+    34,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0
   );
 
 INSERT INTO
@@ -2023,7 +3183,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -2038,7 +3207,16 @@ VALUES
     1970,
     360,
     81,
-    47
+    47,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0
   );
 
 INSERT INTO
@@ -2054,7 +3232,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -2069,7 +3256,16 @@ VALUES
     2370,
     330,
     78,
-    45
+    45,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0
   );
 
 INSERT INTO
@@ -2085,7 +3281,16 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
@@ -2100,7 +3305,16 @@ VALUES
     770,
     210,
     39,
-    16
+    16,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
   );
 
 INSERT INTO
@@ -2116,43 +3330,70 @@ INSERT INTO
     sodium,
     potassium,
     total_carbs,
-    protein
-  )
-VALUES
-  (
-    67,
-    2,
-    'The Garden - Croissant',
-    186,
-    560,
-    315,
-    35,
-    370,
-    770,
-    210,
-    39,
-    16
-  );
-
-INSERT INTO
-  meals (
-    id,
-    eatery_id,
-    name,
-    serving_size,
-    cal,
-    cal_from_fat,
-    total_fat,
-    cholesterol,
-    sodium,
-    potassium,
-    total_carbs,
-    protein
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
   )
 VALUES
   (
     68,
-    8,
+    2,
+    'The Garden - Croissant',
+    186,
+    560,
+    315,
+    35,
+    370,
+    770,
+    210,
+    39,
+    16,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+  );
+
+INSERT INTO
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
+  )
+VALUES
+  (
+    69,
+    7,
     'Egg & Cheese Breakfast Sandwich',
     177,
     380,
@@ -2162,14 +3403,464 @@ VALUES
     770,
     125,
     41,
-    20
+    20,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+  );
+
+INSERT INTO
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
+  )
+VALUES
+  (
+    70,
+    7,
+    'Egg Bacon & Cheese Breakfast Sandwich',
+    137,
+    320,
+    135,
+    15,
+    150,
+    990,
+    200,
+    29,
+    19,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+  );
+
+INSERT INTO
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
+  )
+VALUES
+  (
+    71,
+    7,
+    'Egg Sausage & Cheese Breakfast Sandwich',
+    159,
+    400,
+    216,
+    24,
+    165,
+    930,
+    190,
+    28,
+    19,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+  );
+
+INSERT INTO
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
+  )
+VALUES
+  (
+    72,
+    7,
+    'Egg Ham & Cheese Breakfast Sandwich',
+    173,
+    290,
+    90,
+    10,
+    160,
+    1190,
+    105,
+    29,
+    22,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+  );
+
+INSERT INTO
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
+  )
+VALUES
+  (
+    73,
+    7,
+    'Spinach, Egg White & Feta Flatbread',
+    199,
+    400,
+    144,
+    16,
+    25,
+    920,
+    390,
+    44,
+    21,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+  );
+
+INSERT INTO
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
+  )
+VALUES
+  (
+    74,
+    7,
+    'Spinach, Egg White & Feta Flatbread',
+    199,
+    400,
+    144,
+    16,
+    25,
+    920,
+    390,
+    44,
+    21,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+  );
+
+INSERT INTO
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
+  )
+VALUES
+  (
+    75,
+    8,
+    'Signature Ramen Bowl',
+    535,
+    580,
+    144,
+    16,
+    130,
+    2810,
+    220,
+    76,
+    29,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+  );
+
+INSERT INTO
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
+  )
+VALUES
+  (
+    76,
+    8,
+    'Signature Vegetable Noodle Bowl',
+    517,
+    500,
+    135,
+    15,
+    0,
+    2750,
+    380,
+    71,
+    22,
+    1,
+    1,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    1
+  );
+
+INSERT INTO
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
+  )
+VALUES
+  (
+    77,
+    8,
+    'Signature Crunchy Chicken Salad Bowl',
+    321,
+    390,
+    162,
+    18,
+    40,
+    870,
+    690,
+    40,
+    18,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0
+  );
+
+INSERT INTO
+  meals (
+    id,
+    eatery_id,
+    name,
+    serving_size,
+    cal,
+    cal_from_fat,
+    total_fat,
+    cholesterol,
+    sodium,
+    potassium,
+    total_carbs,
+    protein,
+    dairy_free,
+    alcohol_free,
+    soy_free,
+    nuts_free,
+    gluten_free,
+    wheat_free,
+    egg_free,
+    vegan,
+    vegetarian
+  )
+VALUES
+  (
+    78,
+    8,
+    'Chicken Rice Bowl',
+    356,
+    560,
+    153,
+    17,
+    45,
+    950,
+    360,
+    79,
+    20,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
   );
 
 -- EATERIES
 CREATE TABLE eateries (
   id INTEGER NOT NULL UNIQUE,
   name TEXT NOT NULL,
-  PRIMARY KEY(id AUTOINCREMENT)
+  PRIMARY KEY (id AUTOINCREMENT)
 );
 
 INSERT INTO
