@@ -19,10 +19,10 @@ $eatery_name = $_GET["eatery"] ?? NULL;
 
 <body>
   <h1>Name of App</h1>
-  <h1>Where do you want to eat</h1>
+  <h2>Where do you want to eat</h2>
 
   <!-- choosing eatery-- possible eateries are stored in eatery table it chould just be links with query string parameters -->
-  <a href="/meals?<?php echo http_build_query(array("eatery" => 2)); ?>">Cafe Jennies</a> -->
+  <a href="/meals?<?php echo http_build_query(array("eatery" => 2)); ?>" class='button'>Cafe Jennies</a>
 </body>
 
 </html>

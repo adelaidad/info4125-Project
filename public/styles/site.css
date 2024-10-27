@@ -1,3 +1,56 @@
-h1{
-    color:red;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+html {
+    max-width: 600px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.rounded {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ccc;
+    margin: 0 auto;
+    display: block;
+    margin-top: 40px;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0 auto;
+}
+
+
+body {
+    padding: 20px;
+}
+
+.button {
+    background-color: #001242;
+    color: white;
+    font-weight: 300;
+    text-decoration: none;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 150px;
+    display: block;
+}
+
+.button:hover {
+    background-color: #F7FFF7;
+    color: #001242;
 }

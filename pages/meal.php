@@ -34,12 +34,25 @@ $records = $result->fetchAll();
 
 
 <body>
-  <h1><?php echo $eatery_name ?></php>
-  </h1>
+  <h1> Name of the App</h1>
+  <h2><?php echo $eatery_name ?></php>
+  </h2>
 
-  <?php foreach ($records as $record) { ?>
+  <?php foreach ($records as $record) {
+    $meal_name = $record['name'];
+    $serving_size = $record['serving_size'];
+    $calories = $record['cal'];
+    $calories_fat = $record['cal_from_fat'];
+    $total_fat = $record['total_fat'];
+    $cholesterol = $record['cholesterol'];
+    $sodium = $record['sodium'];
+    $total_carbs = $record['total_carbs'];
+    $protein = $record['protein'];
+  ?>
+
     <p><?php echo $record['name'] ?> </p>
     <!-- HTML format output for records -->
+
   <?php } ?>
 
 
