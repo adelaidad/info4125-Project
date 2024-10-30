@@ -13,6 +13,14 @@ $sql_select = 'SELECT * FROM meals WHERE eatery_id=' . $eatery_id;
 
 $sql_filter_clause = '';
 #TODO FILTERING
+if (isset($_COOKIE['protein'])) {
+  $filter = 'Showing High Protein';
+} else {
+  $filter = 'no filter';
+}
+
+
+
 $sql_query = $sql_select . ' ' . $sql_filter_clause;
 
 $result = exec_sql_query($db, $sql_query);
@@ -51,6 +59,7 @@ $records = $result->fetchAll();
   ?>
 
     <p><?php echo $record['name'] ?> </p>
+    p><?php echo $filter ?> </p>
     <!-- HTML format output for records -->
 
   <?php } ?>

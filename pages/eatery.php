@@ -1,8 +1,18 @@
-<!-- Select Eatery -->
 <?php
-// retrieve query string parameters for eatery
-$eatery_name = $_GET["eatery"] ?? NULL;
+ob_start();
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (isset($_POST['protein'])) {
+    setcookie('protein', '1', time() + (86400 * 30), "/");
+  } else {
+    setcookie('protein', '', time() - 3600, "/");
+  }
+
+  header("Location: " . $_SERVER['PHP_SELF']);
+  exit();
+}
+
+ob_end_flush();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,13 +26,12 @@ $eatery_name = $_GET["eatery"] ?? NULL;
   <link rel="stylesheet" type="text/css" href="/styles/site.css">
 </head>
 
-
 <body>
   <h1>Name of App</h1>
-  <h2>Where do you want to eat</h2>
+  <h2>Where do you want to eat?</h2>
 
-  <!-- choosing eatery-- possible eateries are stored in eatery table it chould just be links with query string parameters -->
   <a href="/meals?<?php echo http_build_query(array("eatery" => 2)); ?>" class='button'>Cafe Jennies</a>
+  <!-- Add the rest of the eateries -->
 </body>
 
 </html>
