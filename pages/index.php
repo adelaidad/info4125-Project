@@ -25,7 +25,8 @@
     <h2>Hi Name!</h2>
   </div>
 
-  <!-- Form for Goals -->
+  <!-- Instead of a form i think it will actually be easier to implement if we just have a bunch of buttons for all of the
+   the options (High protein, Low Carb, Low Cal, Low Fat, Dairy Free, Vegan, Vegetarian, Gluten Free, low chlosterol...etc ) -->
 
 
   <a href="/eateries" class='button'>Find where to eat!</a>
