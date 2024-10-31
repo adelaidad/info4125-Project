@@ -46,5 +46,6 @@
     },
     "[php]": {
         "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
-    }
+    },
+    "DockerRun.DisableDockerrc": true
 }
