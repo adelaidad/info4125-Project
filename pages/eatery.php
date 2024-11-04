@@ -8,6 +8,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     setcookie('protein', '', time() - 3600, "/");
   }
 
+  
+
   header("Location: " . $_SERVER['PHP_SELF']);
   exit();
 }

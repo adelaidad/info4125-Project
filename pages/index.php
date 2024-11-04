@@ -53,18 +53,11 @@
 
       <input type="checkbox" class="btn-check" id="low_cholesterol" name="nutrition[]" value="Low Cholesterol" autocomplete="off">
       <label class="btn btn-outline-success" for="low_cholesterol">Low Cholesterol</label>
-  </div>
-
-  <input id="set_goals" type="submit" value="Find where to eat!" class="btn btn-primary submit" />
-</form>
-
-
-      <!-- Add more checkboxes as needed -->
-      <!--  (High protein, Low Carb, Low Cal, Low Fat, Dairy Free, Vegan, Vegetarian, Gluten Free, low chlosterol...etc ) -->
-  </div>
+    </div>
 
     <input id="set_goals" type="submit" value="Find where to eat!" class="btn btn-primary submit" />
   </form>
+
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
