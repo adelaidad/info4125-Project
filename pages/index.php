@@ -2,7 +2,7 @@
 <?php
 ?>
 <!DOCTYPE html>
-<html lang="en">
+ta<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -57,7 +57,6 @@
 
     <input id="set_goals" type="submit" value="Find where to eat!" class="btn btn-primary submit" />
   </form>
-
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
