@@ -1,31 +1,53 @@
 <!-- All meal options -->
 <?php
-// retrieve query string parameters for eatery
-$eatery_id = $_GET["eatery"] ?? NULL;
 
-#Getting name of selected
-$sql_eatery_name = "SELECT name FROM eateries WHERE id =" . $eatery_id;
-$eatery_record = exec_sql_query($db, $sql_eatery_name)->fetchAll();
+use MakinaCorpus\QueryBuilder\Platform\Escaper\StandardEscaper;
+use MakinaCorpus\QueryBuilder\Platform\Writer\SQLiteWriter;
+use MakinaCorpus\QueryBuilder\DefaultQueryBuilder;
+
+$escaper = new StandardEscaper();
+$writer = new SQLiteWriter($escaper);
+
+$queryBuilder = new DefaultQueryBuilder($writer);
+
+$eatery_id = $_GET["eatery"] ?? NULL;
+$sql_eatery_name = "SELECT name FROM eateries WHERE id = ?";
+$eatery_statement = $db->prepare($sql_eatery_name);
+$eatery_statement->execute([$eatery_id]);
+$eatery_record = $eatery_statement->fetchAll(PDO::FETCH_ASSOC);
 $eatery_name = $eatery_record[0]['name'];
 
-#Getting all info from this eatery
-$sql_select = 'SELECT * FROM meals WHERE eatery_id=' . $eatery_id;
+$query = $queryBuilder
+  ->select('meals')
+  ->column('*')
+  ->where('eatery_id', '=', $eatery_id);
 
-$sql_filter_clause = '';
-#TODO FILTERING
 if (isset($_COOKIE['protein'])) {
-  $filter = 'Showing High Protein';
-} else {
-  $filter = 'no filter';
+  $query->where('protein', '>=', 30);
+}
+if (isset($_COOKIE['low_carb'])) {
+  $query->where('low_carb', '<', 400);
+}
+if (isset($_COOKIE['low_cal'])) {
+  $query->where('low_cal', '<', 50);
+}
+if (isset($_COOKIE['dairy_free'])) {
+  $query->where('dairy_free', '=', 1);
+}
+if (isset($_COOKIE['vegan'])) {
+  $query->where('vegan', '=', 1);
+}
+if (isset($_COOKIE['vegetarian'])) {
+  $query->where('vegetarian', '=', 1);
+}
+if (isset($_COOKIE['gluten_free'])) {
+  $query->where('gluten_free', '=', 1);
+}
+if (isset($_COOKIE['low_cholesterol'])) {
+  $query->where('low_cholesterol', '<=', 300);
 }
 
-
-
-$sql_query = $sql_select . ' ' . $sql_filter_clause;
-
-$result = exec_sql_query($db, $sql_query);
-$records = $result->fetchAll();
-
+$result = $query->executeQuery();
 
 ?>
 <!DOCTYPE html>
@@ -59,7 +81,7 @@ $records = $result->fetchAll();
   ?>
 
     <p><?php echo $record['name'] ?> </p>
-    p><?php echo $filter ?> </p>
+    <p><?php echo $filter ?> </p>
     <!-- HTML format output for records -->
 
   <?php } ?>

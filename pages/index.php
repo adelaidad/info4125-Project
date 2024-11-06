@@ -30,28 +30,28 @@ ta<html lang="en">
       <input type="checkbox" class="btn-check" id="protein" name="protein" value="1" autocomplete="off">
       <label class="btn btn-outline-success" for="protein">High Protein</label>
 
-      <input type="checkbox" class="btn-check" id="low_carb" name="nutrition[]" value="Low Carb" autocomplete="off">
+      <input type="checkbox" class="btn-check" id="low_carb" name="low_carb" value="Low Carb" autocomplete="off">
       <label class="btn btn-outline-success" for="low_carb">Low Carb</label>
 
-      <input type="checkbox" class="btn-check" id="low_cal" name="nutrition[]" value="Low Cal" autocomplete="off">
+      <input type="checkbox" class="btn-check" id="low_cal" name="low_cal" value="Low Cal" autocomplete="off">
       <label class="btn btn-outline-success" for="low_cal">Low Cal</label>
 
-      <input type="checkbox" class="btn-check" id="low_fat" name="nutrition[]" value="Low Fat" autocomplete="off">
+      <input type="checkbox" class="btn-check" id="low_fat" name="low_fat" value="Low Fat" autocomplete="off">
       <label class="btn btn-outline-success" for="low_fat">Low Fat</label>
 
-      <input type="checkbox" class="btn-check" id="dairy_free" name="nutrition[]" value="Dairy Free" autocomplete="off">
+      <input type="checkbox" class="btn-check" id="dairy_free" name="dairy_free" value="Dairy Free" autocomplete="off">
       <label class="btn btn-outline-success" for="dairy_free">Dairy Free</label>
 
-      <input type="checkbox" class="btn-check" id="vegan" name="nutrition[]" value="Vegan" autocomplete="off">
+      <input type="checkbox" class="btn-check" id="vegan" name="vegan" value="Vegan" autocomplete="off">
       <label class="btn btn-outline-success" for="vegan">Vegan</label>
 
-      <input type="checkbox" class="btn-check" id="vegetarian" name="nutrition[]" value="Vegetarian" autocomplete="off">
+      <input type="checkbox" class="btn-check" id="vegetarian" name="vegetarian" value="Vegetarian" autocomplete="off">
       <label class="btn btn-outline-success" for="vegetarian">Vegetarian</label>
 
-      <input type="checkbox" class="btn-check" id="gluten_free" name="nutrition[]" value="Gluten Free" autocomplete="off">
+      <input type="checkbox" class="btn-check" id="gluten_free" name="gluten_free" value="Gluten Free" autocomplete="off">
       <label class="btn btn-outline-success" for="gluten_free">Gluten Free</label>
 
-      <input type="checkbox" class="btn-check" id="low_cholesterol" name="nutrition[]" value="Low Cholesterol" autocomplete="off">
+      <input type="checkbox" class="btn-check" id="low_cholesterol" name="low_cholesterol" value="Low Cholesterol" autocomplete="off">
       <label class="btn btn-outline-success" for="low_cholesterol">Low Cholesterol</label>
     </div>
 
