@@ -1,53 +1,83 @@
 <!-- All meal options -->
 <?php
 
-use MakinaCorpus\QueryBuilder\Platform\Escaper\StandardEscaper;
-use MakinaCorpus\QueryBuilder\Platform\Writer\SQLiteWriter;
-use MakinaCorpus\QueryBuilder\DefaultQueryBuilder;
-
-$escaper = new StandardEscaper();
-$writer = new SQLiteWriter($escaper);
-
-$queryBuilder = new DefaultQueryBuilder($writer);
-
 $eatery_id = $_GET["eatery"] ?? NULL;
-$sql_eatery_name = "SELECT name FROM eateries WHERE id = ?";
-$eatery_statement = $db->prepare($sql_eatery_name);
-$eatery_statement->execute([$eatery_id]);
-$eatery_record = $eatery_statement->fetchAll(PDO::FETCH_ASSOC);
+$eatery_sql = "SELECT name FROM eateries WHERE id = " . $eatery_id;
+$eatery_record = exec_sql_query($db, $eatery_sql)->fetchAll();
 $eatery_name = $eatery_record[0]['name'];
 
-$query = $queryBuilder
-  ->select('meals')
-  ->column('*')
-  ->where('eatery_id', '=', $eatery_id);
+$sql = "SELECT * FROM meals WHERE eatery_id = " . $eatery_id;
+
+$sql_filter_clause = '';
+
+$filter_elements_and = [];
+$filter_elements_or = [];
+
+$feedback = "Showing ";
 
 if (isset($_COOKIE['protein'])) {
-  $query->where('protein', '>=', 30);
-}
-if (isset($_COOKIE['low_carb'])) {
-  $query->where('low_carb', '<', 400);
-}
-if (isset($_COOKIE['low_cal'])) {
-  $query->where('low_cal', '<', 50);
-}
-if (isset($_COOKIE['dairy_free'])) {
-  $query->where('dairy_free', '=', 1);
-}
-if (isset($_COOKIE['vegan'])) {
-  $query->where('vegan', '=', 1);
-}
-if (isset($_COOKIE['vegetarian'])) {
-  $query->where('vegetarian', '=', 1);
-}
-if (isset($_COOKIE['gluten_free'])) {
-  $query->where('gluten_free', '=', 1);
-}
-if (isset($_COOKIE['low_cholesterol'])) {
-  $query->where('low_cholesterol', '<=', 300);
+  $filter_elements_or[] = 'protein >= 20';
+  $feedback .= 'High Protein ';
 }
 
-$result = $query->executeQuery();
+if (isset($_COOKIE['low_carb'])) {
+  $filter_elements_or[] = 'total_carbs < 25';
+  $feedback .= 'Low Carb ';
+}
+
+if (isset($_COOKIE['low_cal'])) {
+  $filter_elements_or[] = 'cal < 400';
+  $feedback .= 'Low Calorie ';
+}
+
+if (isset($_COOKIE['dairy_free'])) {
+  $filter_elements_and[] = 'dairy_free = 1';
+  $feedback .= 'Dairy Free ';
+}
+
+if (isset($_COOKIE['vegan'])) {
+  $filter_elements_and[] = 'vegan = 1';
+  $feedback .= 'Vegan ';
+}
+
+if (isset($_COOKIE['vegetarian'])) {
+  $filter_elements_or[] = 'vegetarian = 1';
+  $feedback .= 'Vegetarian ';
+}
+
+if (isset($_COOKIE['gluten_free'])) {
+  $filter_elements_and[] = 'gluten_free = 1';
+  $feedback .= 'Gluten Free ';
+}
+
+if (isset($_COOKIE['low_cholesterol'])) {
+  $filter_elements_or[] = 'cholesterol < 300';
+  $feedback .= 'Low Cholesterol ';
+}
+
+if (!empty($filter_elements_and)) {
+  $sql_filter_clause .= ' AND (' . implode(' AND ', $filter_elements_and) . ')';
+}
+
+if (!empty($filter_elements_or)) {
+  $sql_filter_clause .= ' AND ';
+  $sql_filter_clause .= '(' . implode(' OR ', $filter_elements_or) . ')';
+}
+
+$sql_query = $sql . $sql_filter_clause;
+echo "<pre>Generated SQL Query: " . htmlspecialchars($sql_query) . "</pre>";
+
+try {
+  $records = exec_sql_query($db, $sql_query)->fetchAll();
+} catch (PDOException $e) {
+  echo "SQL Error: " . $e->getMessage();
+}
+
+if (strlen($feedback) == 8) {
+  $feedback .= 'all options for ' . $eatery_name;
+} else {
+  $feedback .= 'options for ' . $eatery_name;
+}
 
 ?>
 <!DOCTYPE html>
@@ -67,6 +97,7 @@ $result = $query->executeQuery();
   <h1> Name of the App</h1>
   <h2><?php echo $eatery_name ?></php>
   </h2>
+  <h3><?php echo $feedback ?></h3>
 
   <?php foreach ($records as $record) {
     $meal_name = $record['name'];
@@ -81,7 +112,6 @@ $result = $query->executeQuery();
   ?>
 
     <p><?php echo $record['name'] ?> </p>
-    <p><?php echo $filter ?> </p>
     <!-- HTML format output for records -->
 
   <?php } ?>
