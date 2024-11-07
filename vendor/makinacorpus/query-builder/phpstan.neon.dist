@@ -1,6 +1,0 @@
-parameters:
-    phpVersion: 80100
-    level: 5
-    paths:
-        - src
-        - tests

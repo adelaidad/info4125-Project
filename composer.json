@@ -1,6 +1,0 @@
-{
-    "require": {
-        "makinacorpus/query-builder": "^1.6",
-        "doctrine/dbal": "^4.2"
-    }
-}
