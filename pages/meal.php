@@ -13,46 +13,63 @@ $sql_filter_clause = '';
 $filter_elements_and = [];
 $filter_elements_or = [];
 
-$feedback = "Showing ";
+
+
+$feedback = [];
 
 if (isset($_COOKIE['protein'])) {
   $filter_elements_or[] = 'protein >= 20';
-  $feedback .= 'High Protein ';
+  $feedback[] = 'High Protein';
 }
 
 if (isset($_COOKIE['low_carb'])) {
   $filter_elements_or[] = 'total_carbs < 25';
-  $feedback .= 'Low Carb ';
+  $feedback[] = 'Low Carb';
 }
 
 if (isset($_COOKIE['low_cal'])) {
   $filter_elements_or[] = 'cal < 400';
-  $feedback .= 'Low Calorie ';
+  $feedback[] = 'Low Calorie';
 }
 
 if (isset($_COOKIE['dairy_free'])) {
   $filter_elements_and[] = 'dairy_free = 1';
-  $feedback .= 'Dairy Free ';
+  $feedback[] = 'Dairy Free';
 }
 
 if (isset($_COOKIE['vegan'])) {
   $filter_elements_and[] = 'vegan = 1';
-  $feedback .= 'Vegan ';
+  $feedback[] = 'Vegan';
 }
 
 if (isset($_COOKIE['vegetarian'])) {
   $filter_elements_or[] = 'vegetarian = 1';
-  $feedback .= 'Vegetarian ';
+  $feedback[] = 'Vegetarian';
 }
 
 if (isset($_COOKIE['gluten_free'])) {
   $filter_elements_and[] = 'gluten_free = 1';
-  $feedback .= 'Gluten Free ';
+  $feedback[] = 'Gluten Free';
 }
 
 if (isset($_COOKIE['low_cholesterol'])) {
   $filter_elements_or[] = 'cholesterol < 300';
-  $feedback .= 'Low Cholesterol ';
+  $feedback[] = 'Low Cholesterol';
+}
+
+if (isset($_COOKIE['low_sodium'])) {
+  $filter_elements_or[] = 'sodium < 140';
+  $feedback[] = 'Low Sodium';
+}
+
+if (isset($_COOKIE['nut_free'])) {
+  $filter_elements_and[] = 'nuts_free = 1';
+  $feedback[] = 'Nut Free';
+}
+
+if (isset($_COOKIE['soy_free'])) {
+  $filter_elements_and[] = 'soy_free = 1';
+  $feedback[] = 'Soy Free';
 }
 
 if (!empty($filter_elements_and)) {
@@ -73,10 +90,11 @@ try {
   echo "SQL Error: " . $e->getMessage();
 }
 
-if (strlen($feedback) == 8) {
-  $feedback .= 'all options for ' . $eatery_name;
+if (!empty($feedback)) {
+  $listed = implode(', ', $feedback);
+  $feedback_message = 'Showing ' . $listed . ' options for ' . $eatery_name;
 } else {
-  $feedback .= 'options for ' . $eatery_name;
+  $feedback_message = 'Showing all options for ' . $eatery_name;
 }
 
 ?>
@@ -97,7 +115,7 @@ if (strlen($feedback) == 8) {
   <h1> Name of the App</h1>
   <h2><?php echo $eatery_name ?></php>
   </h2>
-  <h3><?php echo $feedback ?></h3>
+  <h3><?php echo $feedback_message ?></h3>
 
   <?php foreach ($records as $record) {
     $meal_name = $record['name'];

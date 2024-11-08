@@ -53,6 +53,15 @@
 
       <input type="checkbox" class="btn-check" id="low_cholesterol" name="low_cholesterol" value="Low Cholesterol" autocomplete="off">
       <label class="btn btn-outline-success" for="low_cholesterol">Low Cholesterol</label>
+
+      <input type="checkbox" class="btn-check" id="low_sodium" name="low_sodium" value="Low Sodium" autocomplete="off">
+      <label class="btn btn-outline-success" for="low_sodium">Low Sodium</label>
+
+      <input type="checkbox" class="btn-check" id="nut_free" name="nut_free" value="Nut Free" autocomplete="off">
+      <label class="btn btn-outline-success" for="nut_free">Nut Free</label>
+
+      <input type="checkbox" class="btn-check" id="soy_free" name="soy_free" value="Soy Free" autocomplete="off">
+      <label class="btn btn-outline-success" for="soy_free">Soy Free</label>
     </div>
 
     <input id="set_goals" type="submit" value="Find where to eat!" class="btn btn-primary submit" />

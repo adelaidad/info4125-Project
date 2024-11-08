@@ -50,6 +50,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     setcookie('low_cholesterol', '', time() - 3600, "/");
   }
 
+  if (isset($_POST['low_sodium'])) {
+    setcookie('low_sodium', '1', time() + (86400 * 30), "/");
+  } else {
+    setcookie('low_sodium', '', time() - 3600, "/");
+  }
+
+  if (isset($_POST['nut_free'])) {
+    setcookie('nut_free', '1', time() + (86400 * 30), "/");
+  } else {
+    setcookie('nut_free', '', time() - 3600, "/");
+  }
+
+  if (isset($_POST['soy_free'])) {
+    setcookie('soy_free', '1', time() + (86400 * 30), "/");
+  } else {
+    setcookie('soy_free', '', time() - 3600, "/");
+  }
+
   header("Location: " . $_SERVER['PHP_SELF']);
   exit();
 }
