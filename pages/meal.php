@@ -1,4 +1,3 @@
-<!-- All meal options -->
 <?php
 
 $eatery_id = $_GET["eatery"] ?? NULL;
@@ -12,8 +11,6 @@ $sql_filter_clause = '';
 
 $filter_elements_and = [];
 $filter_elements_or = [];
-
-
 
 $feedback = [];
 
@@ -43,7 +40,7 @@ if (isset($_COOKIE['vegan'])) {
 }
 
 if (isset($_COOKIE['vegetarian'])) {
-  $filter_elements_or[] = 'vegetarian = 1';
+  $filter_elements_and[] = 'vegetarian = 1';
   $feedback[] = 'Vegetarian';
 }
 
