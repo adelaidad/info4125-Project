@@ -42,29 +42,31 @@ $records = $result->fetchAll();
 
 
 <body>
-  <h1> Name of the App</h1>
-  <h2><?php echo $eatery_name ?></php>
-  </h2>
+  <h1>Name of the App</h1>
+  <h2><?php echo htmlspecialchars($eatery_name); ?></h2>
 
-  <?php foreach ($records as $record) {
-    $meal_name = $record['name'];
-    $serving_size = $record['serving_size'];
-    $calories = $record['cal'];
-    $calories_fat = $record['cal_from_fat'];
-    $total_fat = $record['total_fat'];
-    $cholesterol = $record['cholesterol'];
-    $sodium = $record['sodium'];
-    $total_carbs = $record['total_carbs'];
-    $protein = $record['protein'];
-  ?>
-
-    <p><?php echo $record['name'] ?> </p>
-    p><?php echo $filter ?> </p>
-    <!-- HTML format output for records -->
-
-  <?php } ?>
-
-
+  <?php if (!empty($records)): ?>
+    <div class="meal-list">
+      <?php foreach ($records as $record): ?>
+        <div class="meal-item">
+          <h3><?php echo htmlspecialchars($record['name']); ?></h3>
+          <ul>
+            <li><strong>Serving Size:</strong> <?php echo htmlspecialchars($record['serving_size']); ?></li>
+            <li><strong>Calories:</strong> <?php echo htmlspecialchars($record['cal']); ?> kcal</li>
+            <li><strong>Calories from Fat:</strong> <?php echo htmlspecialchars($record['cal_from_fat']); ?> kcal</li>
+            <li><strong>Total Fat:</strong> <?php echo htmlspecialchars($record['total_fat']); ?> g</li>
+            <li><strong>Cholesterol:</strong> <?php echo htmlspecialchars($record['cholesterol']); ?> mg</li>
+            <li><strong>Sodium:</strong> <?php echo htmlspecialchars($record['sodium']); ?> mg</li>
+            <li><strong>Total Carbohydrates:</strong> <?php echo htmlspecialchars($record['total_carbs']); ?> g</li>
+            <li><strong>Protein:</strong> <?php echo htmlspecialchars($record['protein']); ?> g</li>
+          </ul>
+        </div>
+      <?php endforeach; ?>
+    </div>
+  <?php else: ?>
+    <p>No meals found matching your criteria.</p>
+  <?php endif; ?>
 </body>
+
 
 </html>

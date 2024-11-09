@@ -66,34 +66,6 @@
     <input id="set_goals" type="submit" value="Find where to eat!" class="btn btn-primary submit" />
   </form>
 
-  <div class="selection-form">
-    <h2>Select Your Food and Location</h2>
-    <form action="meal.php" method="GET">
-        <!-- Food Selection -->
-        <label for="food">Choose a Food Item:</label>
-        <select id="food" name="food">
-            <option value="salad">Salad</option>
-            <option value="sandwich">Sandwich</option>
-            <option value="pasta">Pasta</option>
-            <option value="fruit">Fruit</option>
-            <!-- Add more food options as needed -->
-        </select>
-
-        <!-- Location Selection -->
-        <label for="location">Choose a Location:</label>
-        <select id="location" name="location">
-            <option value="north-campus">North Campus</option>
-            <option value="central-campus">Central Campus</option>
-            <option value="west-campus">West Campus</option>
-            <option value="college-town">College Town</option>
-            <!-- Add more location options as needed -->
-        </select>
-
-        <!-- Submit Button -->
-        <button type="submit" class="submit">Find Meals</button>
-    </form>
-</div>
-
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
