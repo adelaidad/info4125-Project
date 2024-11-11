@@ -30,53 +30,61 @@ $soy_free = isset($_COOKIE['soy_free']) && $_COOKIE['soy_free'] == '1' ? 'checke
 
   <div class='user'>
     <picture>
-      <img src="public/images/cornell_student.png" alt="Cornell Student (Persona)" class='rounded'>
+      <img src="public/images/maria.png" alt="Cornell Student (Persona)" class='rounded'>
     </picture>
 
-    <h2>Maria</h2>
+    <h2 class='name'>Maria</h2>
   </div>
 
   <form action="/eateries" method="POST">
-    <div class="button-container d-flex flex-wrap mb-3">
-      <input type="checkbox" class="btn-check" id="protein" name="protein" value="1" autocomplete="off" <?php echo $protein; ?>>
-      <label class="btn btn-outline-success" for="protein">High Protein</label>
+    <div class="container">
+      <!-- Diet Types Section -->
+      <h3 class="mb-3 mt-4 filter">Diet Types</h3>
+      <div class="button-container d-flex flex-wrap mb-4">
+        <input type="checkbox" class="btn-check" id="protein" name="protein" value="1" autocomplete="off" <?php echo $protein; ?>>
+        <label class="btn btn-outline-success me-2 mb-2" for="protein">High Protein</label>
 
-      <input type="checkbox" class="btn-check" id="low_carb" name="low_carb" value="Low Carb" autocomplete="off" <?php echo $low_carb; ?>>
-      <label class="btn btn-outline-success" for="low_carb">Low Carb</label>
+        <input type="checkbox" class="btn-check" id="low_carb" name="low_carb" value="Low Carb" autocomplete="off" <?php echo $low_carb; ?>>
+        <label class="btn btn-outline-success me-2 mb-2" for="low_carb">Low Carb</label>
 
-      <input type="checkbox" class="btn-check" id="low_cal" name="low_cal" value="Low Cal" autocomplete="off" <?php echo $low_cal; ?>>
-      <label class="btn btn-outline-success" for="low_cal">Low Cal</label>
+        <input type="checkbox" class="btn-check" id="low_cal" name="low_cal" value="Low Cal" autocomplete="off" <?php echo $low_cal; ?>>
+        <label class="btn btn-outline-success me-2 mb-2" for="low_cal">Low Cal</label>
 
-      <input type="checkbox" class="btn-check" id="low_fat" name="low_fat" value="Low Fat" autocomplete="off" <?php echo $low_fat; ?>>
-      <label class="btn btn-outline-success" for="low_fat">Low Fat</label>
+        <input type="checkbox" class="btn-check" id="low_fat" name="low_fat" value="Low Fat" autocomplete="off" <?php echo $low_fat; ?>>
+        <label class="btn btn-outline-success me-2 mb-2" for="low_fat">Low Fat</label>
 
-      <input type="checkbox" class="btn-check" id="dairy_free" name="dairy_free" value="Dairy Free" autocomplete="off" <?php echo $dairy_free; ?>>
-      <label class="btn btn-outline-success" for="dairy_free">Dairy Free</label>
+        <input type="checkbox" class="btn-check" id="vegan" name="vegan" value="Vegan" autocomplete="off" <?php echo $vegan; ?>>
+        <label class="btn btn-outline-success me-2 mb-2" for="vegan">Vegan</label>
 
-      <input type="checkbox" class="btn-check" id="vegan" name="vegan" value="Vegan" autocomplete="off" <?php echo $vegan; ?>>
-      <label class="btn btn-outline-success" for="vegan">Vegan</label>
+        <input type="checkbox" class="btn-check" id="vegetarian" name="vegetarian" value="Vegetarian" autocomplete="off" <?php echo $vegetarian; ?>>
+        <label class="btn btn-outline-success me-2 mb-2" for="vegetarian">Vegetarian</label>
 
-      <input type="checkbox" class="btn-check" id="vegetarian" name="vegetarian" value="Vegetarian" autocomplete="off" <?php echo $vegetarian; ?>>
-      <label class="btn btn-outline-success" for="vegetarian">Vegetarian</label>
+        <input type="checkbox" class="btn-check" id="low_cholesterol" name="low_cholesterol" value="Low Cholesterol" autocomplete="off" <?php echo $low_cholesterol; ?>>
+        <label class="btn btn-outline-success me-2 mb-2" for="low_cholesterol">Low Cholesterol</label>
 
-      <input type="checkbox" class="btn-check" id="gluten_free" name="gluten_free" value="Gluten Free" autocomplete="off" <?php echo $gluten_free; ?>>
-      <label class="btn btn-outline-success" for="gluten_free">Gluten Free</label>
+        <input type="checkbox" class="btn-check" id="low_sodium" name="low_sodium" value="Low Sodium" autocomplete="off" <?php echo $low_sodium; ?>>
+        <label class="btn btn-outline-success me-2 mb-2" for="low_sodium">Low Sodium</label>
+      </div>
 
-      <input type="checkbox" class="btn-check" id="low_cholesterol" name="low_cholesterol" value="Low Cholesterol" autocomplete="off" <?php echo $low_cholesterol; ?>>
-      <label class="btn btn-outline-success" for="low_cholesterol">Low Cholesterol</label>
+      <!-- Allergens Section -->
+      <h3 class="mb-3 filter">Allergens</h3>
+      <div class="button-container d-flex flex-wrap mb-4">
+        <input type="checkbox" class="btn-check" id="dairy_free" name="dairy_free" value="Dairy Free" autocomplete="off" <?php echo $dairy_free; ?>>
+        <label class="btn btn-outline-success me-2 mb-2" for="dairy_free">Dairy Free</label>
 
-      <input type="checkbox" class="btn-check" id="low_sodium" name="low_sodium" value="Low Sodium" autocomplete="off" <?php echo $low_sodium; ?>>
-      <label class="btn btn-outline-success" for="low_sodium">Low Sodium</label>
+        <input type="checkbox" class="btn-check" id="gluten_free" name="gluten_free" value="Gluten Free" autocomplete="off" <?php echo $gluten_free; ?>>
+        <label class="btn btn-outline-success me-2 mb-2" for="gluten_free">Gluten Free</label>
 
-      <input type="checkbox" class="btn-check" id="nut_free" name="nut_free" value="Nut Free" autocomplete="off" <?php echo $nut_free; ?>>
-      <label class="btn btn-outline-success" for="nut_free">Nut Free</label>
+        <input type="checkbox" class="btn-check" id="nut_free" name="nut_free" value="Nut Free" autocomplete="off" <?php echo $nut_free; ?>>
+        <label class="btn btn-outline-success me-2 mb-2" for="nut_free">Nut Free</label>
 
-      <input type="checkbox" class="btn-check" id="soy_free" name="soy_free" value="Soy Free" autocomplete="off" <?php echo $soy_free; ?>>
-      <label class="btn btn-outline-success" for="soy_free">Soy Free</label>
-    </div>
+        <input type="checkbox" class="btn-check" id="soy_free" name="soy_free" value="Soy Free" autocomplete="off" <?php echo $soy_free; ?>>
+        <label class="btn btn-outline-success me-2 mb-2" for="soy_free">Soy Free</label>
+      </div>
 
-    <div class="d-flex justify-content-center">
-      <input id="set_goals" type="submit" value="Find where to eat!" class="btn btn-primary submit" />
+      <div class="d-flex justify-content-center">
+        <input id="set_goals" type="submit" value="Find where to eat!" class="btn btn-primary submit" />
+      </div>
     </div>
   </form>
 

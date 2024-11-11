@@ -100,7 +100,7 @@ ob_end_flush();
   <div class='header'>
     <h1>Hello, Maria!</h1>
     <picture>
-      <img src="public/images/cornell_student.png" alt="Cornell Student (Persona)">
+      <img src="public/images/maria.png" alt="Cornell Student Maria (Persona)">
     </picture>
   </div>
   <p>Meals that meet <strong>your</strong> needs:</p>

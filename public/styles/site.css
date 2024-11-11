@@ -12,9 +12,29 @@ body {
     line-height: 1.5;
 }
 
+
+h1,
+h2,
+h3,
+p {
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.btn-outline-success {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.name {
+    margin-top: 10px;
+}
+
 .rounded {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 220px;
     border-radius: 50%;
     margin: 0 auto;
     display: block;
@@ -124,6 +144,33 @@ a {
 
 .header img {
     width: 60px;
-    height: 60px;
+    height: 65px;
     border-radius: 50%;
+}
+
+.filter {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+
+}
+
+.button-container {
+    gap: 0.5rem;
+}
+
+.btn-outline-success {
+    border-radius: 20px;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-success:hover {
+    transform: scale(1.05);
+}
+
+.submit {
+    margin-top: 1rem;
+    padding: 0.75rem 2rem;
+    border-radius: 25px;
 }
