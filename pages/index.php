@@ -27,6 +27,7 @@ $soy_free = isset($_COOKIE['soy_free']) && $_COOKIE['soy_free'] == '1' ? 'checke
 </head>
 
 <body>
+  <?php include("includes/phone.php"); ?>
 
   <div class='user'>
     <picture>
@@ -34,6 +35,11 @@ $soy_free = isset($_COOKIE['soy_free']) && $_COOKIE['soy_free'] == '1' ? 'checke
     </picture>
 
     <h2 class='name'>Maria</h2>
+
+    <figure>
+      <img src="public/images/tracker.svg">
+    </figure>
+
   </div>
 
   <form action="/eateries" method="POST">

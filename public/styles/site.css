@@ -4,6 +4,7 @@
 
 html {
     max-width: 600px;
+    background: #F7F7F7;
 }
 
 body {
@@ -42,6 +43,7 @@ p {
 }
 
 .user {
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -80,12 +82,26 @@ a {
 }
 
 .eatery {
-    background: rgba(121, 198, 184, 0.28);
     border-radius: 20px;
     padding: 10px;
     margin: 7px;
     color: black;
 }
+
+.blue {
+    background: rgba(121, 198, 184, 0.28);
+}
+
+.purple {
+    background: #CB859A47;
+}
+
+.pink {
+    background: #F3B19759;
+
+}
+
+
 
 .nav {
     position: fixed;
@@ -135,11 +151,16 @@ a {
     max-width: 400px;
     max-height: 50px;
     padding: 3px;
+    margin-top: 20px;
+}
+
+.arrow {
+    margin-top: 20px;
 }
 
 .header h1 {
     margin: 0;
-    margin-right: 100px;
+    margin-right: 130px;
 }
 
 .header img {
@@ -173,4 +194,79 @@ a {
     margin-top: 1rem;
     padding: 0.75rem 2rem;
     border-radius: 25px;
+}
+
+.iphone-status-bar {
+    position: absolute;
+    top: 9px;
+    left: 0;
+    right: 0;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    z-index: 1000;
+}
+
+
+.meal-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.meal-item {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(121, 198, 184, 0.28);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.meal-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px #CB859A47;
+}
+
+.meal-item h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.meal-item ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.meal-item li {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #555;
+    display: flex;
+    align-items: center;
+}
+
+.meal-item li strong {
+    color: #333;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.no-meals-message {
+    text-align: center;
+    font-size: 18px;
+    color: #777;
+}
+
+.feedback-message {
+    text-align: center;
+    font-size: 12px;
+    color: #777;
 }

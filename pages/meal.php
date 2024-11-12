@@ -93,9 +93,9 @@ try {
 
 if (!empty($feedback)) {
   $listed = implode(', ', $feedback);
-  $feedback_message = 'Showing ' . $listed . ' options for ' . $eatery_name;
+  $feedback_message = 'Showing ' . $listed . ' options';
 } else {
-  $feedback_message = 'Showing all options for ' . $eatery_name;
+  $feedback_message = 'Showing all options';
 }
 
 
@@ -114,14 +114,17 @@ if (!empty($feedback)) {
 
 
 <body>
+  <?php include("includes/phone.php"); ?>
   <a href="/eateries" class='arrow'>
-    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="28" height="50" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M23.3333 14H4.66667M4.66667 14L11.6667 7M4.66667 14L11.6667 21" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
     </svg>
   </a>
 
-  
+
   <h1 class='eatery-name'><?php echo htmlspecialchars($eatery_name); ?></h1>
+
+  <p class='feedback-message'><?php echo $feedback_message ?></p>
 
   <?php if (!empty($records)): ?>
     <div class="meal-list">
@@ -142,7 +145,7 @@ if (!empty($feedback)) {
       <?php endforeach; ?>
     </div>
   <?php else: ?>
-    <p>No meals found matching your criteria.</p>
+    <p class='no-meals-message'>No meals found matching your criteria.</p>
   <?php endif; ?>
 
   <div class='nav'>
