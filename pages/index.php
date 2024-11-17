@@ -93,8 +93,6 @@ ob_end_flush();
 </head>
 
 
-
-
 <body>
   <?php include("includes/phone.php"); ?>
 

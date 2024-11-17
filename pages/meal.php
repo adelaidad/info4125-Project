@@ -130,6 +130,8 @@ if (!empty($feedback)) {
     <div class="meal-list">
       <?php foreach ($records as $record): ?>
         <div class="meal-item">
+          <span class="favorite-star" onclick="toggleFavorite(this)">&#9734;</span>
+
           <h3><?php echo htmlspecialchars($record['name']); ?></h3>
           <ul>
             <li><strong>Serving Size:</strong> <?php echo htmlspecialchars($record['serving_size']); ?></li>
@@ -141,6 +143,7 @@ if (!empty($feedback)) {
             <li><strong>Total Carbohydrates:</strong> <?php echo htmlspecialchars($record['total_carbs']); ?> g</li>
             <li><strong>Protein:</strong> <?php echo htmlspecialchars($record['protein']); ?> g</li>
           </ul>
+          <button class="log-meal-button">Log as Eaten</button>
         </div>
       <?php endforeach; ?>
     </div>
@@ -148,6 +151,12 @@ if (!empty($feedback)) {
     <p class='no-meals-message'>No meals found matching your criteria.</p>
   <?php endif; ?>
 
+
+  <script>
+    function toggleFavorite(element) {
+      element.classList.toggle("filled");
+    }
+  </script>
 </body>
 
 

@@ -220,6 +220,7 @@ a {
 }
 
 .meal-item {
+    position: relative;
     background-color: #ffffff;
     border-radius: 12px;
     padding: 20px;
@@ -269,4 +270,37 @@ a {
     text-align: center;
     font-size: 12px;
     color: #777;
+}
+
+.log-meal-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #79c6b8;
+    color: #ffffff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.log-meal-button:hover {
+    background-color: #68b3a3;
+}
+
+.favorite-star {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.favorite-star.filled {
+    color: #FFD700;
+    /* Gold color for filled star */
 }
